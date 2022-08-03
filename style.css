@@ -1,4 +1,49 @@
-.header {
+.section {
+    display: flex;
+    overflow: hidden;
+}
+.item {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+}
+.item:hover {
+    background-color: blueviolet;
+}
+.filter-point {
+    text-align: center;
+}
+.filter-scroll {
+    width: 600px;
+    max-height: 600px;
+    overflow: auto;
+}
+.form-names {
+    display: flex;
+}
+.input-point {
+    display: flex;
+    flex-direction: column;
+}
+.dates {
+    display: flex;
+}
+.form-scroll {
+    width: 200px;
+    max-height: 250px;
+    overflow: auto;
+    text-align: center;
+}
+.form-scroll p {
+    cursor: pointer;
+}
+.form-scroll p:hover {
+background-color: blueviolet;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+
+/* .header {
     display: flex;
     justify-content: space-around;
 }
@@ -33,4 +78,5 @@ button {
 }
 .filter h2 {
 text-align: center;
-}
+} */
+
