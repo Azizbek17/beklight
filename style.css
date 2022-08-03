@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+}
+.block {
+    display: grid;
+    width: 25%;
+    padding-top: 30px;
+}
+
+button {
+    background-color: rgb(240, 240, 240);
+    border: .5px solid black;
+    cursor: pointer;
+}
+
+.dropdown-item {
+    border: 1px solid black !important;
+}
+
+.btn-secondary {
+    background-color: rgb(240, 240, 240)!important;
+    color: black !important;
+    border-radius: 0 !important;
+}
+
+.filter{
+    justify-content: space-between;
+}
+.filter-btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+.filter h2 {
+text-align: center;
+}
