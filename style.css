@@ -1,22 +1,67 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    background-image: url(./img/pagnotta2.jpg);
+    background-size: cover;
+}
 .section {
     display: flex;
-    overflow: hidden;
+    justify-content: space-evenly;
 }
 .item {
     cursor: pointer;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .item:hover {
-    background-color: blueviolet;
+    background-color: #563d7c;
+    color: #f2f2f2;
 }
 .filter-point {
     text-align: center;
+    padding-top: 20px;
 }
+.filter-btn {
+    color: #f2f2f2;
+    width: -webkit-fill-available;
+    max-width: 500px;
+    height: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+    background-color: #563d7c;
+    border-radius: 3px;
+    margin-bottom: 20px;
+}
+
+/* .filter-btn::before {
+    background: #ffe9e9;
+    transform: translate(0, 0.25em);
+} */
+
+.filter-btn:active {
+    background: #ffe9e9;
+    transform: translate(0em, 0.75em);
+}
+
+.filter-btn:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+}
+
+.filter-btn:hover {
+    background-color: #ffe9e9;
+    transition: .3s;
+    color: #1d1d1d;
+}
+
 .filter-scroll {
     width: 600px;
-    max-height: 600px;
+    max-height: 538px;
     overflow: auto;
+    background-color: #eeeeee; opacity: 0.9;
+    border-radius: 5px;
 }
 .form-names {
     display: flex;
@@ -24,22 +69,109 @@
 .input-point {
     display: flex;
     flex-direction: column;
+    font-weight: 500;
+    padding-top: 20px;
+}
+input {
+    border-radius: 2px;
+    border: 1px solid rgb(235, 235, 235);
+    padding: 5px;
+    margin-top: 5px;
 }
 .dates {
     display: flex;
 }
 .form-scroll {
-    width: 200px;
-    max-height: 250px;
+    margin-top: 15px;
+    max-width: 600px;
+    max-height: 265px;
     overflow: auto;
     text-align: center;
+    background-color: #eeeeee; opacity: 0.9;
+    border-radius: 5px;
 }
 .form-scroll p {
     cursor: pointer;
+    padding: 5px;
 }
 .form-scroll p:hover {
-background-color: blueviolet;
+background-color: #563d7c;
+color: #f2f2f2;
 }
+.save-btn {
+    width: -webkit-fill-available;
+    margin-top: 20px;
+    height: 35px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+    background-color: #563d7c;
+    border-radius: 3px;
+    color: #f2f2f2;
+}
+.save-btn:active {
+    background: #ffe9e9;
+    transform: translate(0em, 0.75em);
+}
+
+.save-btn:active::before {
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
+}
+
+.save-btn:hover {
+    background-color: #ffe9e9;
+    transition: .3s;
+    color: #1d1d1d;
+}
+
+@media screen and (max-width: 1024px) {
+    .filter-scroll {
+        width: 400px;
+    }
+    .filter-scroll {
+        max-height: 570px;
+    }
+
+    .form-scroll {
+        max-height: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        justify-content: space-around;
+    }
+    .form-names {
+        display: block;
+    }
+    .input-point {
+        margin: 0 !important;
+    }
+    .filter-scroll {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+.section {
+    display: grid;
+}
+}
+
+@media screen and (max-width: 320px) {
+    .item {
+        justify-content: space-evenly;
+    }
+    .input-point {
+       align-items: center;
+    }
+    .dates {
+        display: block;
+    }
+    }
+
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 
