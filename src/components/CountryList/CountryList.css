@@ -1,0 +1,18 @@
+.country-list {
+    width: 300px;
+    height: 60vh;
+    padding: 2rem;
+    background: #f2f2f2;
+    overflow-y: auto;
+    text-align: start;
+    margin: 10vh;
+}
+
+.country-list li {
+    padding: .5rem 1rem;
+}
+.country-list li:hover {
+    background: #444;
+    color: #fff;
+    cursor: pointer;
+}

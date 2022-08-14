@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+import {useState, useEffect} from 'react';
 import './App.css';
+import CountryList from './components/CountryList/CountryList';
+import CountryInfo from './components/CountryInfo/CountryInfo';
+
 
 function App() {
+  const [countries, setCountries] = useState([]);
+  const [currentCountry, setCurrentCountry] = useState({})
+
+  useEffect(() => {
+    fetch('https://restcountries.com/v2/all')
+    .then(response => response.json())
+    .then(countries => setCountries(countries))
+  }, []);
+
+  const selectCountry = name => {
+    const [currentCountry] = countries.filter(item => item.name === name);
+    setCurrentCountry(currentCountry)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <CountryList countries={countries} selected={selectCountry}/>
+      { Object.keys(currentCountry).length !== 0 ? 
+      <CountryInfo country={currentCountry}/> : 
+      <h1>Выберите страну</h1>
+      }
     </div>
   );
 }
